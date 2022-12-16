@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+    <h1 id="title">Web Development Survey</h1>
+    <p id="description">Thank you for taking the time to help us improve</p>
+    </header>
+
+    <form id="survey-form">
+        <label id="name-label" for="name">Name
+            <input id="name" type="text" placeholder="Enter your name" required>
+        </label>
+
+        <label id="email-label" for="email">Email
+            <input id="email" type="email" placeholder="Enter your email" required>
+        </label>
+
+        <label id="number-label" for="age">Age (optional)
+            <input id="number" type="number" min="15" max="110" placeholder="age">
+        </label>
+
+        <label for="dropdown">Which option best describes your current role?
+            <select name="dropdown" id="dropdown">
+                <option value="">Select an option</option>
+                <option value="1">Student</option>
+                <option value="2">Employed</option>
+                <option value="3">Unemployed</option>
+                <option value="4">Prefer not to say</option>
+            </select>
+        </label>
+
+        <p>What do you prefer?</p>
+            <label for="definetily"><input id="definetily" type="radio" name="radio" class="inline" value="definetily">University</label>
+            <label for="maybe"><input id="maybe" type="radio" name="radio" class="inline" value="maybe">Bootcamps</label>
+            <label for="notsure"><input id="notsure" type="radio" name="radio" class="inline" value="not sure">Free tutorials</label>
+
+        <p>What is your favorite language?</p>
+            <label for="html">
+                <input type="checkbox" name="html" id="html" class="inline" value="html">HTML
+            </label>
+            <label for="css">
+                <input type="checkbox" name="css" id="css" class="inline" value="css">CSS
+            </label>
+            <label for="java">
+                <input type="checkbox" name="java" id="java" class="inline" value="java">JavaScript
+            </label>
+            <label for="php">
+                <input type="checkbox" name="php" id="php" class="inline" value="php">PHP
+            </label>
+
+        <label for="comments">Any comments or suggestions?
+            <textarea id="comments" name="comments" rows="5" cols="30" placeholder="Enter your comments here..."></textarea>
+        </label>
+
+        <button id="submit" type="submit">Submit</button>
+    </form>
+</body>
+</html>
