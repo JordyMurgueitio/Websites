@@ -8,25 +8,80 @@ body {
 
 header {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
-    background-color: aqua;
+    background-color: rgb(0, 0, 0);
     align-items: center;
+    position: fixed;
+    top: 0;
 }
 
+.logo-container {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    max-width: 300px;
+}
+#logo {
+    width: 100%;
+    max-width: 150px;
+}
+nav {
+    background-color: rgb(0, 0, 0);
+    width: 70%;
+    margin: 0;
+    min-width: 300px;
+}
+.links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0%;
+}
+.nav-item {
+    list-style-type: none;
+}
+.nav-link {
+    color: white;
+}
+/* Header Tablets and large screen */
+@media screen and (min-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .logo-container {
+        width: 30%;
+    }
+    nav {
+        width: 40%;
+    }
+}
+
+
 #mission-section {
-    background-color: rgb(168, 40, 40);
-    width: 80%;
-    margin: 0 auto;
-    height: 500px;
+    background-image: url(./images/img-mission-background.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 90%;
+    margin: 100px auto 0px auto;
+    height: 700px;
     display: flex;
     align-items: center;
 }
 
 .text-container {
-    background-color: rgb(36, 87, 131);
+    background-color: rgb(0, 0, 0);
+    width: 100%;
     text-align: center;
+    color: white;
+}
+
+@media screen and (min-width: 700px) {
+    #mission-section {
+        margin: 50px auto 0px auto;
+    }
 }
 
 #tea-section {
@@ -35,10 +90,6 @@ header {
 
 #tea-section h2, #tea-section p {
     text-align: center;
-}
-
-.text-container {
-    background-color: aquamarine;
 }
 
 .tea-container {
