@@ -31,6 +31,9 @@ header {
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
+#navbar a:hover {
+    color:  rgb(46, 87, 46);
+}
 #welcome-section {
     background: linear-gradient(45deg, black, rgb(25 30 63));
     color: white;
@@ -47,7 +50,7 @@ header {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #projects {
-    background: linear-gradient(-45deg, black, rgb(25 30 63));;
+    background: linear-gradient(45deg, black, rgb(25 30 63));
     padding: 60px 2%;
 }
 #projects-header {
@@ -55,6 +58,7 @@ header {
     margin-bottom: 60px;
     color: white;
     font-weight: 400;
+    font-size: 2em;
 }
 #projects-container {
     display: flex;
@@ -110,6 +114,9 @@ header {
     font-size: 1.4em;
     color: white;
     text-decoration: none;
+}
+.links a:hover {
+    color: rgb(46, 87, 46);
 }
 #profile-link{
     margin-right: 10px;
