@@ -1,6 +1,11 @@
 body {
-  background-color: aqua;
+  background-color: gray;
   margin: 0%;
+}
+
+#mission {
+  background-color: white;
+  height: 300px;
 }
 
 /*# sourceMappingURL=styles.css.map */

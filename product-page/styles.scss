@@ -1,6 +1,12 @@
 $main-color: white;
+$secondary-color: gray;
 
 body {
-    background-color: aqua;
+    background-color: $secondary-color;
     margin: 0%;
+}
+
+#mission {
+    background-color: $main-color;
+    height: 300px;
 }
