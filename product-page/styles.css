@@ -59,12 +59,25 @@ header .nav-container .nav .nav-item .nav-link:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 400px;
+  height: 80vh;
 }
 #mission div {
   background-color: white;
   text-align: center;
   width: 100%;
+}
+
+/* PORTFOLIO SECTION */
+#portfolio {
+  text-align: center;
+  padding-top: 2rem;
+}
+#portfolio p {
+  width: 80%;
+  margin: 0 auto;
+}
+#portfolio .portfolio-container {
+  background-color: aquamarine;
 }
 
 /*# sourceMappingURL=styles.css.map */

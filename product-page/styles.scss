@@ -61,10 +61,24 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 400px;
+    height: 80vh;
     div {
         background-color: $main-color;
         text-align: center;
         width: 100%;
+    }
+}
+
+/* PORTFOLIO SECTION */
+
+#portfolio {
+    text-align: center;
+    padding-top: 2rem;
+    p {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .portfolio-container {
+        background-color: aquamarine
     }
 }
