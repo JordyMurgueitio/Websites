@@ -1,11 +1,44 @@
-body {
-  background-color: gray;
-  margin: 0%;
+* {
+  box-sizing: border-box;
 }
 
-#mission {
-  background-color: white;
-  height: 300px;
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0px;
+}
+
+header {
+  background-color: darksalmon;
+  margin-top: -16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .logo-container {
+  background-color: aqua;
+  width: 10%;
+  min-width: 100px;
+}
+header .logo-container .logo {
+  width: 100%;
+  height: auto;
+}
+header .nav-container {
+  background-color: aquamarine;
+  width: 90%;
+}
+header .nav-container .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0%;
+}
+header .nav-container .nav .nav-item {
+  list-style-type: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
