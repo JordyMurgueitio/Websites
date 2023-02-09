@@ -73,12 +73,29 @@ header {
 
 #portfolio {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 2.5rem;
     p {
         width: 80%;
-        margin: 0 auto;
+        margin: 2rem auto;
     }
     .portfolio-container {
-        background-color: aquamarine
+        background-color: $main-color;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: space-evenly;
+        .portfolio-box {
+            width: 40%;
+            min-width: 300px;
+            max-width: 400px;
+            height: 30%;
+            overflow-y: hidden;
+            margin: 1rem 0;
+            img {
+                width: 90%;
+            }
+        }
     }
 }

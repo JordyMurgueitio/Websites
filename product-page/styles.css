@@ -70,14 +70,31 @@ header .nav-container .nav .nav-item .nav-link:hover {
 /* PORTFOLIO SECTION */
 #portfolio {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 2.5rem;
 }
 #portfolio p {
   width: 80%;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 #portfolio .portfolio-container {
-  background-color: aquamarine;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+}
+#portfolio .portfolio-container .portfolio-box {
+  width: 40%;
+  min-width: 300px;
+  max-width: 400px;
+  height: 30%;
+  overflow-y: hidden;
+  margin: 1rem 0;
+}
+#portfolio .portfolio-container .portfolio-box img {
+  width: 90%;
 }
 
 /*# sourceMappingURL=styles.css.map */
