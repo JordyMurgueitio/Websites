@@ -46,8 +46,7 @@ header .nav-container .nav .nav-item .nav-link {
   text-decoration: none;
 }
 header .nav-container .nav .nav-item .nav-link:hover {
-  color: azure;
-  background-color: black;
+  color: #F14266;
 }
 
 /* MISSION SECTION */
@@ -105,7 +104,40 @@ header .nav-container .nav .nav-item .nav-link:hover {
   margin: 2rem 0;
 }
 #team .box-container {
-  background-color: aquamarine;
+  background-image: url(./images/background1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0px;
+}
+#team .box-container .team-box {
+  width: 200px;
+  background-color: antiquewhite;
+  margin: 10px;
+}
+#team .box-container .team-box img {
+  width: 100%;
+}
+#team .box-container .team-box .name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2% 0 0 0;
+}
+footer #copyright {
+  margin-top: 40px;
+}
+
+h2 {
+  color: #F14266;
 }
 
 /*# sourceMappingURL=styles.css.map */

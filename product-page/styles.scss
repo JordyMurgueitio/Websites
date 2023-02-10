@@ -43,8 +43,7 @@ header {
                     text-decoration: none;
                 }
                 .nav-link:hover {
-                    color: azure;
-                    background-color: black;
+                    color: #F14266;
                 }
             }
         }
@@ -109,7 +108,40 @@ header {
     }
 
     .box-container {
-        background-color: aquamarine;
+        background-image: url(./images/background1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 0px;
+        .team-box {
+            width: 200px;
+            background-color: antiquewhite;
+            margin: 10px;
+            img {
+                width: 100%;
+            }
+            .name {
+                font-weight: bold;
+                font-size: 1.1rem;
+            }
+        }
     }
 }
 
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 2% 0 0 0;
+    #copyright {
+        margin-top: 40px;
+    }
+}
+
+h2 {
+    color: #F14266;
+}
