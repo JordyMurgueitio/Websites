@@ -1,0 +1,18 @@
+.grid {
+    display: grid;
+    background-color: bisque;
+    width: 100%;
+    height: 500px;
+    grid-template-columns: 40% 40% 20%;  //defines number and width of each column
+    grid-template-rows: 40% 40% ;  //defines number and height of each row 
+    grid-template: 40% 40% / 40% 40% 20% //Shorthand for template rows and template columns in that order
+}
+
+// Fraction - define the size of columns and rows as a fraction of the grid’s length and width.
+
+.grid {
+    display: grid;
+    width: 1000px;
+    height: 400px;
+    grid-template: 2fr 1fr 1fr / 1fr 3fr 1fr; // 3 rows of 200px, 100px, 100px - 3c columns 200px, 600px, 200px
+}
