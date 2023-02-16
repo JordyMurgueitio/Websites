@@ -1,3 +1,5 @@
+// 1. GRID CONTAINER
+
 .grid {
     display: grid;
     background-color: bisque;
@@ -43,4 +45,29 @@
     height: 600px;
     grid-template: repeat(3, 1fr) / repeat(3,1fr);
     gap: 20px 10px;  //distance between rows to 20px and the distance between columns to 10px. If only 1 value given, column gap and row gap to that value.
+}
+
+
+
+
+// 2. GRID ITEMS
+
+// multiple row and column items - single grid items take up multiple rows or columns. 
+
+.item {
+    grid-row-start: 1; //item will take rows 1 and 2 
+    grid-row-end: 3;
+    grid-column-start: 4; //item will take columns 4 and 5
+    grid-column-end: 6;
+}
+
+.item {
+    grid-row: 1 / 3;  //shorthand for row-start and row-end
+    grid-column: 4 / span 2;  //span keyword allows to start or end a column or row, relative to its other end.
+}
+
+// Grid Area - This property will set the starting and ending positions for both the rows and columns of an item.
+
+.item {
+    grid-area: 2 / 3 / 4 / span 5;  //grid-row-start / grid-column-start / grid-row-end / grid-column-end
 }
