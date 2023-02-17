@@ -11,6 +11,39 @@
     grid-template-rows: 40% 40% ;  //defines number and height of each row 
     grid-template: 40% 40% / 40% 40% 20% //Shorthand for template-rows and template-columns in that order
 }
+    // 1.1.1 Fraction - define the size of columns and rows as a fraction of the grid’s length and width.
+.grid {
+    display: grid;
+    width: 1000px;
+    height: 400px;
+    grid-template: 2fr 1fr 1fr / 1fr 3fr 1fr; // 3 rows of 200px, 100px, 100px - 3c columns 200px, 600px, 200px
+}
+
+    // 1.1.2  Repeat - will duplicate the specifications for rows or columns a given number of times
+.grid {
+    display: grid;
+    width: 300px;
+    grid-template-columns: repeat(3, 1fr); //Split the grid into 3 equal columns
+    grid-template-columns: repeat(2, 20px 50px); // creaate 4 columns, 1st & 3rd 20px - 2nd & 4th 50px
+    grid-template: repeat(3, 1fr) / 3fr 50% 1fr; //3rows 1fr each and 3 columns 
+}
+
+    //  1.1.3 minmax - prevent a row or column from getting too big or too small - if used, width has to be deleted from grid. 
+.grid {
+    display: grid;
+    grid-template-columns: 100px minmax(100px, 500px) 100px; // 1st and 3rd columns 100px wide. 2nd column will be between 100 and 500px wide
+    grid-template: repeat(3, 1fr) / 3fr minmax(50px, 300px) 1fr; // 3 rows equal size - 3 columns different sizes
+}
+
+    //  1.1.4 grid gap - shorthand row-gap and column-gap will put blank space between every row and column in the grid.
+.grid {
+    display: grid;
+    width: 320px;
+    height: 600px;
+    grid-template: repeat(3, 1fr) / repeat(3,1fr);
+    gap: 20px 10px;  //distance between rows to 20px and the distance between columns to 10px. If only 1 value given, column gap and row gap to that value.
+}
+
 
 //  1.2  GRID-TEMPLATE-AREAS -  allows to name sections of the page to use as values in the grid-row-start, grid-row-end, grid-column-start,grid-column-end, and grid-area properties
 .container {
@@ -82,44 +115,6 @@ main {
 
 
 //  1.6 ALLIGN-CONTENT
-
-// Fraction - define the size of columns and rows as a fraction of the grid’s length and width.
-
-.grid {
-    display: grid;
-    width: 1000px;
-    height: 400px;
-    grid-template: 2fr 1fr 1fr / 1fr 3fr 1fr; // 3 rows of 200px, 100px, 100px - 3c columns 200px, 600px, 200px
-}
-
-// Repeat - will duplicate the specifications for rows or columns a given number of times
-
-.grid {
-    display: grid;
-    width: 300px;
-    grid-template-columns: repeat(3, 1fr); //Split the grid into 3 equal columns
-    grid-template-columns: repeat(2, 20px 50px); // creaate 4 columns, 1st & 3rd 20px - 2nd & 4th 50px
-    grid-template: repeat(3, 1fr) / 3fr 50% 1fr; //3rows 1fr each and 3 columns 
-}
-
-// minmax - prevent a row or column from getting too big or too small - if used, width has to be deleted from grid. 
-
-.grid {
-    display: grid;
-    grid-template-columns: 100px minmax(100px, 500px) 100px; // 1st and 3rd columns 100px wide. 2nd column will be between 100 and 500px wide
-    grid-template: repeat(3, 1fr) / 3fr minmax(50px, 300px) 1fr; // 3 rows equal size - 3 columns different sizes
-}
-
-// grid gap - shorthand row-gap and column-gap will put blank space between every row and column in the grid.
-
-.grid {
-    display: grid;
-    width: 320px;
-    height: 600px;
-    grid-template: repeat(3, 1fr) / repeat(3,1fr);
-    gap: 20px 10px;  //distance between rows to 20px and the distance between columns to 10px. If only 1 value given, column gap and row gap to that value.
-}
-
 
 
 
