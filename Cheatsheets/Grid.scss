@@ -1,5 +1,7 @@
 // 1. GRID CONTAINER
 
+// 1.1. GRID-TEMPLATE-COLUMNS / GRID-TEMPLATE-ROWS / GRID-AREA
+
 .grid {
     display: grid;
     background-color: bisque;
@@ -9,6 +11,77 @@
     grid-template-rows: 40% 40% ;  //defines number and height of each row 
     grid-template: 40% 40% / 40% 40% 20% //Shorthand for template-rows and template-columns in that order
 }
+
+//  1.2  GRID-TEMPLATE-AREAS -  allows to name sections of the page to use as values in the grid-row-start, grid-row-end, grid-column-start,grid-column-end, and grid-area properties
+.container {
+    display: grid;
+    max-width: 900px;
+    position: relative;
+    margin: auto;
+    grid-template-areas:"head head"
+                        "nav nav" 
+                        "info services"
+                        "footer footer";
+    grid-template-rows: 300px 120px 800px 120px;
+    grid-template-columns: 1fr 3fr; 
+}
+header {
+    grid-area: head;
+} 
+nav {
+    grid-area: nav;
+} 
+.info {
+    grid-area: info;
+} 
+.services {
+    grid-area: services;
+}
+footer {
+    grid-area: footer;
+} 
+
+
+// 1.3 JUSTIFY-ITEMS -  position elements within their columns from left to right - on containers
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);  // grid with 3 columns 400px each 
+    justify-items: center;  // items will be centered inside of their columns. 
+    justify-items: start; //  aligns grid items to the left side of the grid area
+    justify-items: end; //  aligns grid items to the right side of the grid
+    justify-items: stretch; //  stretches all items to fill the grid area
+}
+// notes: If item's witdh is not set and justify-items isn't set, the items will span the width of the column. (400px) 
+//notes: if a width is set for items, they won't strecth the width of the column (it will probably overflow) 
+
+
+// 1.4 JUSTIFY-CONTENT  -  position the columns within the grid. position the entire grid along the row axis - on containers 
+
+.container {
+    display: grid;
+    width: 1000px;   //creates a 1000px wide grid
+    grid-template-columns: 300px 300px; // creates 2 columns total width: 600px, left space: 400px
+    justify-content: center;   // positions the columns in the center of the grid, leaving 200px on the right and 200px on the left of the grid
+    justify-content: end;  //   aligns the columns to the right side of the grid container
+    justify-content: start; //  aligns the columns to the left side of the grid container
+    justify-content: stretch;  //   stretches the grid columns to increase the size of the grid to expand horizontally across the container
+    justify-content: space-around;  //  includes an equal amount of space on each side of a grid columns
+    justify-content: space-between;  //  includes an equal amount of space between grid columns and no space at either end
+    justify-content: space-evenly;  //  places an even amount of space between grid items and at either end
+} 
+
+
+//  1.5 ALLIGN-ITEMS -  positions items from top to bottom within their rows. declared on grid containers.
+main {
+    display: grid;
+    grid-template-rows: repeat(3, 400px);  // creates a grid wit 3 rows 400px each
+    align-items: center;   //  item will be centered vertically inside of their rows. They will only be as tall as necessary
+}
+// notes: If item's height is not set and justify-items isn't set, the items will span the height of the row. (400px) 
+//notes: if a height is set for items, they won't strecth the height of the row (it will probably overflow) 
+
+
+//  1.6 ALLIGN-CONTENT
 
 // Fraction - define the size of columns and rows as a fraction of the grid’s length and width.
 
