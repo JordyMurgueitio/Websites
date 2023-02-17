@@ -75,7 +75,7 @@ footer {
 } 
 
 
-// 1.3 JUSTIFY-ITEMS -  position elements within their columns from left to right - on containers
+// 1.3 JUSTIFY-ITEMS -  position elements within their columns from left to right - declared on containers
 main {
     display: grid;
     grid-template-columns: repeat(3, 400px);  // grid with 3 columns 400px each 
@@ -85,10 +85,9 @@ main {
     justify-items: stretch; //  stretches all items to fill the grid area
 }
 // notes: If item's witdh is not set and justify-items isn't set, the items will span the width of the column. (400px) 
-//notes: if a width is set for items, they won't strecth the width of the column (it will probably overflow) 
 
 
-// 1.4 JUSTIFY-CONTENT  -  position the columns within the grid. position the entire grid along the row axis - on containers 
+// 1.4 JUSTIFY-CONTENT  -  position the columns within the grid. position the entire grid along the row axis - declared on containers 
 
 .container {
     display: grid;
@@ -111,7 +110,7 @@ main {
     align-items: center;   //  item will be centered vertically inside of their rows. They will only be as tall as necessary
 }
 // notes: If item's height is not set and justify-items isn't set, the items will span the height of the row. (400px) 
-//notes: if a height is set for items, they won't strecth the height of the row (it will probably overflow) 
+
 
 
 //  1.6 ALLIGN-CONTENT
