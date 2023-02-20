@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgb(55, 77, 69);
     margin: 0;
@@ -7,40 +11,58 @@ body {
     display: grid;
     width: 100%;
     background-color: rgb(231, 140, 22);
-    grid-template: 100px 2fr 1fr 200px/repeat(4, 25%);
-    align-items: stretch;
+    grid-template: 100px 600px 1fr 200px/repeat(4, 25%);
     header {
-        background-color: red;
+        background-color: rgb(22, 48, 54);
+        margin: 0;
         grid-row: 1 / 2;
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 4;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         ul {
             display: flex;
             flex-direction: row;
-            justify-items: center;
-            align-items: center;
-            align-content: center;
-            background-color: aqua;
+            background-color: rgba(0, 255, 255, 0);
+            padding: 0;
+            width: 500px;
+            justify-content: space-evenly;
             li {
                 list-style-type: none;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 1.1em;
+                }
+                a:hover {
+                    color: rgb(231, 140, 22);;
+                }
             }
         }
     }
+
     #hero-section {
         grid-row: 2 / 3;
-        grid-column: 1 / span 3;  ////grid-row-start / grid-column-start / grid-row-end / grid-column-end
-        background-color: blueviolet;
+        grid-column: 1 / span 4;
         height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: aliceblue;        //grid-row-start / grid-column-start / grid-row-end / grid-column-end
+        background: {
+            color: rgb(146, 89, 199);
+            image: url("../portfolio/world.jpg");
+            size: cover;
+            repeat: no-repeat;
+            position: center;
+            attachment: fixed;
+        }
     }
     #left-section {
         background-color: blue;
         grid-row: 3 / 4;
         grid-column: 1 / span 2;
-        background-image: url(../tea-shop/images/img-berryblitz.jpg);
-        background-size: cover;
-        background-position: center;
         display: flex;
         flex-direction: column;
         align-items: center;
