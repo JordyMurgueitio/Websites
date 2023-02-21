@@ -13,7 +13,7 @@ body {
     background-color: rgb(231, 140, 22);
     grid-template: 100px 600px 1fr 200px/repeat(4, 25%);
     header {
-        background-color: rgb(22, 48, 54);
+        background-color: rgb(253 167 17);
         margin: 0;
         grid-row: 1 / 2;
         grid-column: 1 / span 4;
@@ -35,7 +35,7 @@ body {
                     font-size: 1.1em;
                 }
                 a:hover {
-                    color: rgb(231, 140, 22);;
+                    color: rgb(34, 29, 56);;
                 }
             }
         }
@@ -52,29 +52,57 @@ body {
         color: aliceblue;        //grid-row-start / grid-column-start / grid-row-end / grid-column-end
         background: {
             color: rgb(146, 89, 199);
-            image: url("../portfolio/world.jpg");
+            image: url("./images/bridge.png");
             size: cover;
             repeat: no-repeat;
             position: center;
             attachment: fixed;
         }
+        .section-title {
+            color: black;
+            font: {
+                size: 2rem;
+                family: "Tahoma";
+            }
+        }
+        p {
+            color: rgb(255, 255, 255);
+            font-weight: 700;
+            background-color: black;
+        }
     }
     #left-section {
-        background-color: blue;
+        background-color: rgb(255, 255, 255);
         grid-row: 3 / 4;
-        grid-column: 1 / span 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        grid-column: 1 / span 3;
+        .section-title {
+            margin: 70px 0;
+            text-align: center;
+            font: {
+                size: 2em;
+            }
+        }
+        .gallery-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            .photo-box {
+                width: 250px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
     }
     #right-section {
         grid-row: 3 / 4;
-        grid-column: 3 / span 1;
-        background-color: aqua;
+        grid-column: 4 / span 1;
+        background-color: rgb(34, 36, 36);
     }
     footer {
         background-color: aqua;
         grid-row: 4 / 5;
-        grid-column: 1 / span 3;
+        grid-column: 1 / span 4;
     }
 }

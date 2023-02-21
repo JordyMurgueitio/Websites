@@ -14,7 +14,7 @@ body {
   grid-template: 100px 600px 1fr 200px/repeat(4, 25%);
 }
 .grid header {
-  background-color: rgb(22, 48, 54);
+  background-color: rgb(253, 167, 17);
   margin: 0;
   grid-row: 1/2;
   grid-column: 1/span 4;
@@ -39,7 +39,7 @@ body {
   font-size: 1.1em;
 }
 .grid header ul li a:hover {
-  color: rgb(231, 140, 22);
+  color: rgb(34, 29, 56);
 }
 .grid #hero-section {
   grid-row: 2/3;
@@ -51,29 +51,53 @@ body {
   justify-content: center;
   color: aliceblue;
   background-color: rgb(146, 89, 199);
-  background-image: url("../portfolio/world.jpg");
+  background-image: url("./images/bridge.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
 }
+.grid #hero-section .section-title {
+  color: black;
+  font-size: 2rem;
+  font-family: "Tahoma";
+}
+.grid #hero-section p {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  background-color: black;
+}
 .grid #left-section {
-  background-color: blue;
+  background-color: rgb(255, 255, 255);
   grid-row: 3/4;
-  grid-column: 1/span 2;
+  grid-column: 1/span 3;
+}
+.grid #left-section .section-title {
+  margin: 70px 0;
+  text-align: center;
+  font-size: 2em;
+}
+.grid #left-section .gallery-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.grid #left-section .gallery-container .photo-box {
+  width: 250px;
+}
+.grid #left-section .gallery-container .photo-box img {
+  width: 100%;
 }
 .grid #right-section {
   grid-row: 3/4;
-  grid-column: 3/span 1;
-  background-color: aqua;
+  grid-column: 4/span 1;
+  background-color: rgb(34, 36, 36);
 }
 .grid footer {
   background-color: aqua;
   grid-row: 4/5;
-  grid-column: 1/span 3;
+  grid-column: 1/span 4;
 }
 
 /*# sourceMappingURL=styles.css.map */
