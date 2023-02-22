@@ -23,8 +23,17 @@ a {
 a {
     transition-property: width;
     transition-duration: 0.5s;
-    transition-delay: 0.2s;
+    transition-delay: 0.2s; 
 }
+
+
+// 4. transition -  shorthand for the 3 properties above 
+a {
+    transition: color 1.5s linear 0.5s; // transition-property, transition-duration, transition-timing-function, transition-delay.
+}
+
+
+// 5. Combinations 
 
 
 
