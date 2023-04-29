@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #131921;
+    margin: 0;
+    display: flex;
+    color: white;
+}
+
+header .deliver-box {
+    display: flex;
+    align-items: center;
+}
+
+header .deliver-info {
+    display: flex;
+    flex-direction: column;
+}
