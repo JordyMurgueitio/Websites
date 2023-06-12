@@ -23,7 +23,7 @@
 </noscript> 
 <![endif]-->
 <style>
-     * {
+    * {
         box-sizing: border-box;
     } 
     table, td, div, h1, p {font-family: "Roboto";}
@@ -37,28 +37,105 @@
         top: 30px;
         left: 15%;
     }
+    .promo-box {
+        width: 220px
+    }
     .paragraph-container {
         position: absolute;
         bottom: 10px;
         left: 15%;
         width: 80%;
     }
-    li {
-        background-color: #27E0F6;
+    .para1 {
+        font-size: 18px;
+    }
+    .para2 {
+        font-size: 14px; 
+        margin: 10px 0
+    }
+
+    #test {
+        display: none;
+    }
+    /* 1 hour extra section */
+    #one-section {
+        margin-top: 20px; 
+        padding-bottom: 15px; 
+    }
+    .image-container {
+        width: 100%;
+    }
+    #person1-mobile {
+        display: block;
+    }
+    #person1-desk {
+        display: none;
+    }
+    .info-box {
+        width: 80%;
+    }
+    .info-box p:first-child {
+        font-size: 18px;
     }
 
     @media screen and (min-width: 550px) {
+        .promo-container {
+            top: 20px; 
+            left: 19%;
+        }
+    } 
+
+    @media screen and (min-width: 700px) {
         .dashed-container {
-            height: 200px;
+            height: 180px;
         }
         .promo-container {
             position: absolute;
-            top: 30px;
-            left: 100px;
+            top: 20px;
+            right: 0;
+            left: 50%; 
+            width: 190px;
         }
-        li {
-            background-color: blue;
+        .promo-box {
+            width: 200px;
         }
+        .paragraph-container {
+            top: 20px;
+            left: 5%;
+            width: 37%;
+        }
+        #test {
+            display: block;
+        }
+        /* one hour section */
+        #one-section {
+        padding-bottom:0; 
+        position: relative;
+        height: 195px;
+        }
+        .image-container {
+            position: absolute;
+            width: 220px;
+        }
+        #person1-mobile {
+            display: none;
+        }
+        #person1-desk {
+            display: block;
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .info-box {
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            width: 45%;
+            
+        }
+        .info-box p:first-child {
+        font-size: 22px;
+    }
     }
 </style>
 </head>
@@ -118,23 +195,24 @@
                                             </a>
                                         </section>
                                         <!-- 2nd section: discount information -->
-                                        <section style="background-color: rgb(255, 255, 255); padding-top: 10px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px">
+                                        <section class="discount-code" style="background-color: rgb(255, 255, 255); padding: 10px 0 20px 0; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px">
+                                            
                                             <h1 style="font-style: normal;margin: 0 ; font-weight: 700;font-size: 20px;"><span>x% off</span> a bigger subscription</h1>
                                             <p style="font-size: 16px; font-weight:400; line-height: 26px; color: #192435; width: 85%; text-align: left; letter-spacing: 0.1px;">
                                                 Hi student, we love seeing students reach their full potential.
                                                 That's why we're giving you 
                                                 % off your next payment when you upgrade to a bigger subscription plan.
                                             </p>
-                                            
-                                            <div align="center" class="dashed-container" style="border: 1.9px dashed #27E0F6; width: 85%; border-radius: 20px; position: relative; padding: 20px 0; ">
-                                                
-
+                                            <!-- Dashed container -->
+                                            <div align="center" class="dashed-container" style="border: 1.9px dashed #27E0F6; width: 85%; border-radius: 20px; position: relative; padding: 20px 0; margin-bottom: 20px; ">
+                                                <!-- blue form background -->
                                                 <div class="promo-container" style="background-color: #C3F5FA; transform: rotate(-6.28deg); border-radius: 50px;">
-                                                    <div class="promo" style="background-color: #FFFFFF; width: 100%; transform: rotate(6.28deg); padding: 5px 15px; border-radius: 20px; box-shadow: 0px 4px 6.8px rgba(0, 0, 0, 0.3)">
-                                                        <img src="./images/logo2.png" alt="" width="40px" style="margin: 0;">
-                                                        <p style="margin-top: 0; text-align: left; color: #192435; font-weight: bold;">Enter your promo code</p>
-                                                        <div style="background-color: #F7F5F2; display: inline-block; width: 40%; padding: 0;">
-                                                            
+                                                    <!-- discount code box -->
+                                                    <div class="promo-box" style="background-color: #FFFFFF; transform: rotate(6.28deg); padding: 10px 15px; border-radius: 20px; box-shadow: 0px 4px 6.8px rgba(0, 0, 0, 0.3); position: relative; top: 20px;">
+                                                        <img src="./images/logo2.png" alt="preply-logo" width="50px" style="margin: 0;">
+                                                        <p style="margin: 5px 0;font-size: 14px; text-align: left; color: #192435; font-weight: bold;">Enter your promo code</p>
+                                                        
+                                                        <div style="background-color: #F7F5F2; display: inline-block; border-radius: 5px; width: 40%; padding: 0;">
                                                             <p style="margin: 0; font-size: 16px; letter-spacing: 0.14px;">
                                                                 <span class="material-symbols-outlined" style="transform: rotate(-110deg); font-size: 19px; color: #27E0F6 ;">
                                                                 label
@@ -142,19 +220,90 @@
                                                                 BIG10
                                                             </p>
                                                         </div>
-                                                        <a href="" style="display: inline-block; width: 40%;">Apply</a>
+                                                        <!-- apply code link -->
+                                                        <a href="" style="display: inline-block; width: 40%; background-color: #0096B2; color: rgb(255, 255, 255); text-decoration: none; font-size: 14px; border-radius: 5px;">Apply</a>
                                                     </div>
                                                 </div>
-
+                                                <!-- Paragraph container -->
                                                 <div class="paragraph-container" style="text-align: left;">
-                                                    <p style="color: #192435; font-weight: 700; font-size: 18px; letter-spacing: 0.14px; margin: 0;">Use your promo code at checkout: <span style="color: #27E0F6; font-weight: 900; font-size: 22px;">BIG10</span></p>
-                                                    <p style="color: #192435; font-size: 14px; margin: 10px 0;">Get ready to notice some big progress</p>
+                                                    <p class="para1" style="color: #192435; font-weight: 700; letter-spacing: 0.14px; margin: 0; line-height: 28px;">Use your promo code at checkout: <span style="color: #27E0F6; font-weight: 900; font-size: 22px;">BIG10</span></p>
+                                                    <p class="para2" style="color: #192435;">Get ready to notice some big progress</p>
                                                 </div>
-
                                                 
-                                            </div>
+                                            </div> <!-- end dashed container -->
                                             
+                                            <a href="" style="background-color: #0096B2; color: #ffffff; border-radius: 12px; display: block; width: 85%; padding: 14px 0; text-decoration: none; font-size: 18px;">Upgrade my plan</a>
                                         </section>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Text Section desktop devices -->
+                    <tr id="test">
+                        <td align="center" style="padding:0;">
+                            <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+                                <tr>
+                                    <td align="center" style="padding: 20px 0 0 0;">
+                                        <section>
+                                            <h2>Give a bigger plan a try! </h2>
+                                            <p>
+                                                You're in control of your learning. 
+                                                Try a bigger subscription plan, and if you're not happy with the results, 
+                                                you can always return to your current one. 
+                                            </p>
+                                        </section>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- 1 extra hour section -->
+                    <tr>
+                        <td align="center" style="padding:0;">
+                            <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+                                <tr>
+                                    <td align="center" style="padding: 0;">
+                                        
+                                        <section id="one-section" style="border-radius: 20px; background-color: #ffffff;">
+                                            <figure class="image-container" style="  margin: 0; background-color: #F3F3F3;">
+                                                <img id="person1-mobile" src="./images/persona1-mobile.png" alt="figure" width="100%" style="border-top-left-radius: 20px;border-top-right-radius: 20px;">
+                                                <img id="person1-desk" src="./images/persona1-desk.png" alt="figure">
+                                            </figure>
+
+                                            <div class="info-box" style="padding: 10px 0;">
+                                                <p style="margin: 10px 0; font-weight: 700; color:#090F19; letter-spacing: 0.14px; text-align: left;">1 extra hour / week</p>
+                                                <p style="margin: 0; font-weight: 400; color: #192435; font-size: 16px; letter-spacing: 0.1px; text-align: left;">"I'm ready to speed up my progress”</p>
+                                                <a href="" style="background-color: #0096B2;color: #ffffff; border-radius: 12px; display: block; padding: 10px 0;text-decoration: none; font-size: 18px; margin: 20px 0 0 0;text-align: center;">Upgrade</a>
+                                        
+                                            </div>
+
+                                    
+                                        </section>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- 2 extra hour section -->
+                    <tr>
+                        <td align="center" style="padding:0;">
+                            <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+                                <tr>
+                                    <td align="center" style="padding: 0;">
+                                        
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- 3 extra hour section -->
+                    <tr>
+                        <td align="center" style="padding:0;">
+                            <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
+                                <tr>
+                                    <td align="center" style="padding: 0;">
+                                        
                                     </td>
                                 </tr>
                             </table>
