@@ -108,6 +108,14 @@
         padding-bottom: 15px; 
     }
 
+    #only-mobile {
+        display: block;
+    }
+
+    #prepare-lesson {
+        text-align: center;
+    }
+
     @media screen and (min-width: 550px) {
         .promo-container {
             top: 20px; 
@@ -196,6 +204,14 @@
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
         }
+        /* last section */
+        #only-mobile {
+        display: none;
+        }
+        #prepare-lesson {
+        text-align: left;
+        width: 80%;
+    }
     }
 </style>
 </head>
@@ -213,11 +229,18 @@
                                 <tr>
                                     <td align="center" style="padding: 20px 0 0 0;">
                                         <header>
-                                            <img src="./images/preply-logo.png" alt="preply-logo" style="margin-bottom: 5px;">
+                                            <a href="https://preply.com/edu/english/learn?chatCondition=true" target="_blank">
+                                                <img src="./images/preply-logo.png" alt="preply-logo" style="margin-bottom: 5px;">
+                                            </a>
+                                            
                                             <nav>
                                                 <ul style="text-align: center; padding: 0;">
-                                                    <li style="list-style-type: none; display: inline-block; color: #8194A7; font-size: 16px; margin-right: 25px;">My Lessons</li>
-                                                    <li style="list-style-type: none; display: inline-block; color: #8194A7; font-size: 16px;">Buy hours</li>
+                                                    <li style="list-style-type: none; display: inline-block; margin-right: 25px;">
+                                                        <a style="color: #8194A7; font-size: 16px; text-decoration: none; " href="https://preply.com/edu/english/learn?chatCondition=true" target="_blank">My Lessons</a>  
+                                                    </li>
+                                                    <li style="list-style-type: none; display: inline-block; color: #8194A7; font-size: 16px;">
+                                                        <a style="color: #8194A7; font-size: 16px; text-decoration: none;" href="https://preply.com/edu/english/learn?chatCondition=true" target="_blank">Buy hours</a> 
+                                                    </li>
                                                 </ul>
                                             </nav>
                                         </header>
@@ -257,7 +280,7 @@
                                         <!-- 2nd section: discount information -->
                                         <section class="discount-code" style="background-color: rgb(255, 255, 255); padding: 10px 0 20px 0; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px">
                                             
-                                            <h1 style="font-style: normal;margin: 0 ; font-weight: 700;font-size: 20px;"><span>x% off</span> a bigger subscription</h1>
+                                            <h1 style="font-style: normal;margin: 0 ; font-weight: 700;font-size: 20px;"><span style="color: #27E0F6;">x% off</span> a bigger subscription</h1>
                                             <p style="font-size: 16px; font-weight:400; line-height: 26px; color: #192435; width: 85%; text-align: left; letter-spacing: 0.1px;">
                                                 Hi student, we love seeing students reach their full potential.
                                                 That's why we're giving you 
@@ -304,10 +327,10 @@
                         <td align="center" style="padding:0;">
                             <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
                                 <tr>
-                                    <td align="center" style="padding: 20px 0 0 0;">
+                                    <td align="center" style="padding: 0;">
                                         <section>
-                                            <h2>Give a bigger plan a try! </h2>
-                                            <p>
+                                            <h2 style="color: #192435; font-weight: 700; font-size: 22px; margin: 30px 0 0 0 ;">Give a bigger plan a try! </h2>
+                                            <p style="color: #192435; font-size: 16px; line-height: 26px; width: 92%; text-align: left;">
                                                 You're in control of your learning. 
                                                 Try a bigger subscription plan, and if you're not happy with the results, 
                                                 you can always return to your current one. 
@@ -421,8 +444,11 @@
                                             </div>
 
                                             <div class="info-container" style="padding: 10px 0;">
-                                                <h2 style="font-size: 20px; color: #192435; font-weight: 700;">Prepare for your lesson</h2>
-                                                <p style="margin: 10px 0 20px 0; width: 80%; text-align: left; color: #192435; font-size: 16px; line-height: 26px;">
+                                                <h2 id="prepare-lesson" style="font-size: 20px; color: #192435; font-weight: 700; margin-bottom: 30px;">
+                                                    Prepare for your lesson
+                                                </h2>
+
+                                                <p id="only-mobile" style="margin: 10px 0 20px 0; width: 80%; text-align: left; color: #192435; font-size: 16px; line-height: 26px;">
                                                     Your balance with {tutor} has been refilled with more hours. 
                                                     Stay focused on your weekly lessons, 
                                                     and we'll keep taking care of the rest!
